@@ -1,0 +1,10 @@
+
+.sticky-top {
+  top: 80px;
+}
+.list-group-item.active{
+  color: #fff;
+background-color: #cda379;
+border-color: #cda379;
+  font-family: 'Montserrat', sans-serif;
+}

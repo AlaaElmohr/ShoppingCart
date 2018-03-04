@@ -1,0 +1,31 @@
+<div class="content">
+   <div class="container">
+      <h3>Orders</h3>
+      <ng-container>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of orders ">
+              <td>
+                {{ order.shipping.name }}
+              </td>
+              <td >
+              {{ order.datePlaced | date }}
+              </td>
+              <td >
+                <a [routerLink]="['/view' , order.$key]" (click)="view(order)">View</a>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </ng-container>
+   </div>
+</div>

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.content{
+  padding: 50px 0px;
+}
+.card-img-top{
+    background-color: rgba(27,17,13,0.7);
+}
+.btn-secondary{
+color:#fff !important;
+background-color:#cda379;
+border:3px solid #cda379;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+.card-body h4{
+color:#cda379;
+font-family: 'Arizonia', cursive;
+}
+.card-body p{
+color:#233240;
+font-family: Quicksand;
+}
+body{
+  font-family: Quicksand;
+}
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-size: cover;
+}

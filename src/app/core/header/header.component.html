@@ -1,0 +1,41 @@
+<div class="cover-container d-flex mx-auto flex-column">
+  <div class="overlay-header">
+      <header class="masthead">
+        <div class="inner">
+          <div class="logo">
+                <h3 class="masthead-brand text-center">Fashionesta</h3>
+          </div>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link " routerLink="/shopping-cart" routerLinkActive="active">Shopping Cart
+
+             <span class="badge badge-warning badge-pill" *ngIf="cart$ | async as cart">{{cart.totalItemsCount }}</span>
+            </a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+            <a class="nav-link " routerLink="/login" routerLinkActive="active" *ngIf="!appUser">Login</a>
+            <a class="nav-item dropdown" [ngClass]="{show : expandValue==true}" *ngIf="appUser">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="expand()">
+                {{appUser.name}}
+             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="{show : expandValue==true}" >
+              <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
+              <ng-container *ngIf="appUser.isAdmin">
+                <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+                <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+              </ng-container>
+              <a class="dropdown-item" (click)="logOut()">Log Out</a>
+            </div>
+          </a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover text-center">
+        <h3>Season Sale!</h3>
+        <h1>Big Sales</h1>
+        <p class="lead">
+        50% OFF
+        </p>
+          <a class="btn btn-lg btn-primary" >Shopping Now</a>
+      </main>
+    </div>
+    </div>
